@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Торты{% endblock %}
+
+{% block content %}
+<div class="wrapper2">
+<div class="card">
+  <img src="{% static '01.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4>Праздничные</h4>
+    <p class="card-text">Цена: 30 руб/кг</p>
+    <a class="link1" href="{% url 'cake' cake_id=1 %}">Подробнее</a>
+  </div>
+</div>
+
+  <div class="card">
+  <img src="{% static '02.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4>Детские</h4>
+    <p class="card-text">Цена: 25 руб/кг</p>
+    <a class="link1" href="{% url 'sample' sample_id=6 %}">Подробнее</a>
+  </div>
+</div>
+
+  <div class="card">
+  <img src="{% static '03.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4>Свадебные</h4>
+    <p class="card-text">Цена: 50 руб/кг</p>
+    <a class="link1" href="{% url 'sample' sample_id=7 %}">Подробнее</a>
+  </div>
+</div>
+
+<div class="card">
+  <img src="{% static '04.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4>Корпоративные</h4>
+    <p class="card-text">Цена: 35 руб/кг</p>
+    <a class="link1" href="{% url 'sample' sample_id=8 %}">Подробнее</a>
+  </div>
+</div>
+
+
+
+</div>
+
+
+{% endblock %}

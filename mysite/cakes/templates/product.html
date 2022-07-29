@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}{{book.name}}{% endblock %}
+
+{% block content %}
+
+
+{% for sample in samples %}
+<div class="container-product">
+    <h1 style="text-align: center;font-style: italic; font-family: Edwardian Script ITC; ">{{ sample.sample }}</h1>
+    <img src="{{ sample.images.url }}" width="100%">
+
+</div>
+{% endfor %}
+{% endblock %}

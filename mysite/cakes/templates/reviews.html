@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Отзывы{% endblock %}
+
+{% block content %}
+
+<p style="text-align: center; font-size: 30px; font-style: italic; font-family: Edwardian Script ITC; ">Уважаемые друзья,</p>
+<p style="text-align: center; font-size: 30px; font-style: italic; font-family: Edwardian Script ITC; ">если вы уже попробовали торт от кондитерского магазина San Tortini, будем  рады услышать ваше мнение. </p>
+
+<form action="/reviews/" method="post" style='margin: 100px 0 100px 0; text-align: center;'>
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group" style="margin: 0 0 30px 0">
+            {{field.label}}
+            <div>{{field}}</div>
+            <div class="error">{{field.errors}}</div>
+        </div>
+        {% endfor %}
+
+    <input type="submit" value="Отправить">
+</form>
+<div class="review" style="text-align: justify; font-size: 13px; line-height: 20px; width: 1000px;
+	 margin: 50px 0 50px 150px">
+{% for review in reviews %}
+    <p style="font-weight: bold; font-size: 20px;">{{ review.name }}</p>
+    <p>{{ review.text }}</p>
+    <hr/>
+{% endfor %}
+</div>
+{% endblock %}

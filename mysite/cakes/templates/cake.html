@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% load static%}
+
+{% block title %}Торты{% endblock %}
+
+{% block content %}
+
+<h3>{{ cake.name }} торты</h3>
+
+<hr/>
+
+
+<div class="wrapper2" style="margin: 0 0 0 200px">
+<div class="card">
+  <img src="{% static 'prod1.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>День рождения</h5>
+    <a class="link1" href="{% url 'product' product_id=1 %}">Подробнее</a>
+  </div>
+</div>
+
+  <div class="card">
+  <img src="{% static 'prod2.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>Новый год</h5>
+    <a class="link1" href="{% url 'product' product_id=2 %}">Подробнее</a>
+  </div>
+</div>
+
+  <div class="card">
+  <img src="{% static 'prod3.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>8 марта</h5>
+    <a class="link1" href="{% url 'product' product_id=3 %}">Подробнее</a>
+  </div>
+</div>
+
+</div>
+
+<div class="wrapper2" style="margin: 0 0 0 350px">
+<div class="card">
+  <img src="{% static 'prod4.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>День влюбленных</h5>
+    <a class="link1" href="{% url 'product' product_id=4 %}">Подробнее</a>
+  </div>
+</div>
+
+  <div class="card">
+  <img src="{% static 'prod5.png' %}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5>23 февраля</h5>
+    <a class="link1" href="{% url 'product' product_id=5 %}">Подробнее</a>
+  </div>
+</div>
+
+
+</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static%}
+{% block title %}Заказать{% endblock %}
+
+{% block content %}
+
+<img src="{% static 'ord01.png' %}" alt="" width="100%">
+<h4 style="text-align: center;">Время работы</h4>
+
+<p style="text-align: center; margin: 0 0 1px 0; ">Кондитерская по адресу ул. Авангардная, дом 58</p>
+<p style="text-align: center; margin: 0 0 1px 0;">с 10:00 до 20:00</p>
+<p style="text-align: center; margin: 0 0 5px 0;">Без выходных</p>
+<p style="text-align: center; margin: 0 0 5px 0;">Прием заявок по телефону +375 (29) 926 11 11</p>
+<p style="text-align: center;">воскресенье - выходной</p>
+
+
+<form action="." method="post">
+    {% csrf_token %}
+    {% for field in form %}
+        <div class="form-group" style="margin: 0 0 10px 0; text-align: center; ">
+            {{field.label}}
+            <div>{{field}}</div>
+            <div class="error">{{field.errors}}</div>
+        </div>
+        {% endfor %}
+    <input type="submit" value="Отправить заказ" style="margin: 0 0 70px 600px;" >
+
+</form>
+
+
+{% endblock %}

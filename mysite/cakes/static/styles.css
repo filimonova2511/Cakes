@@ -1,0 +1,61 @@
+
+h3 {
+text-align: center;
+font-size: 50px;
+font-style: italic;
+font-weight: bold;
+font-family: Edwardian Script ITC;
+}
+
+
+
+.navbar-brand {
+    width: 37%;
+    color: #000000;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: Edwardian Script ITC;
+}
+.container-fluid{
+    width: 90%;
+    font-size: 25px;
+    font-style: italic;
+    font-family: Edwardian Script ITC;
+}
+.bg-light {
+    --bs-white-opacity: 1;
+    background-color: rgba(var(--bs--rgb),var(--bs-white-opacity))!important;
+}
+.registration-data {
+    font-size: 10px;
+    text-align: center;
+	height: 128px;
+	line-height: 1px;
+}
+
+._13Lxq {
+    font-size: 15px;
+    text-align: center;
+    line-height: 36px;
+    color: brown;
+    font-style: italic;
+}
+
+.wrapper2 {
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+padding: 20px;
+margin-bottom: 20px;
+}
+
+
+.card{
+width: 20%;
+height: auto;
+border: 1px solid #145660;
+padding: 10px;
+margin: 30px;
+}
+
