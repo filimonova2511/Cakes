@@ -9,7 +9,7 @@ class ReviewForm(forms.Form):
 
 class OrderForm(forms.Form):
     name = forms.CharField(label='Имя')
-    date = forms.DateField(label='Дата мероприятия') # TODO fix validation problem
+    date = forms.DateField(input_formats=['%d.%m.%Y'], label='Дата мероприятия')
     weight = forms.IntegerField(label='Вес торта')
     cake = forms.ModelChoiceField(queryset=Cake.objects.all(), label='Категория')
     products = forms.ModelChoiceField(queryset=Product.objects.all(), label='Событие')
